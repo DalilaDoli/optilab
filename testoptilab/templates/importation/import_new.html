@@ -2,7 +2,6 @@
 
 {% block content %}
   
-    <!-- Dans votre_template.html -->
     <script type="application/json" id="vecteur_consommation1">
         {{ vecteur_consommation1_json|safe }}
     </script>
@@ -12,7 +11,7 @@
     <div class="container-fluid">
     <div class="row">
         <div class="col-sm-11">
-            <div class="text-left mb-3"> <!-- Utilisation de la classe text-right pour aligner à droite et mb-3 pour la marge en bas -->
+            <div class="text-left mb-3">
                     <!-- <button class="btn btn-primary" id="afficherajouterclient" onclick="affichecreationclient()">Ajouter un client</button> -->
                     <a   class="btn bg-gradient-primary border-left-secondary border-bottom-secondary ml-2 text-light btn-icon-split" id="affichertableau1" onclick="affichertableau1()">
                         <span class="icon text-white-50">
@@ -48,7 +47,6 @@
            
         </div>
         <div class="col-sm-12 mx-auto" >
-            <!-- Premier tableau -->
             <div class="row">
               
                 <div class="col-md-6">
@@ -151,7 +149,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Modal -->
                 <div class="modal fade" id="myModalValeur" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">

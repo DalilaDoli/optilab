@@ -9,10 +9,8 @@
 <form method="post" enctype="multipart/form-data" id="uploadForm">
     {% csrf_token %}
 
-    <!-- Champs pour le fichier Excel -->
     <label for="id_fichier_excel">Fichier Excel:</label>
     <input type="file" name="fichier_excel" id="id_fichier_excel" required>
-    <!-- Champs pour les paramètres -->
     <label for="id_valeur_maximale">Valeur Maximale:</label>
     <input type="number" name="valeur_maximale" id="id_valeur_maximale">
 
@@ -24,14 +22,12 @@
 
     
 
-     <!-- Champs pour les dates -->
      <label for="id_date_debut">Date de début:</label>
      <input type="datetime-local" name="date_debut" id="id_date_debut" required>
  
      <label for="id_date_fin">Date de fin:</label>
      <input type="datetime-local" name="date_fin" id="id_date_fin" required>
  
-    <!-- Bouton de soumission -->
     <button type="submit" >Importer le fichier</button>
 </form>
 <div class="card shadow mb-6">
@@ -44,7 +40,6 @@
                 <tr>
                     <th>Date</th>
                     <th>Consommation</th>
-                    <!-- Ajoutez d'autres colonnes au besoin -->
                 </tr>
             </thead>
             <tbody id="tableBody">

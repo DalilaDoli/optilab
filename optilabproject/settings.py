@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'optilabproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testoptilab',
+        'NAME': 'optilabproject',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',  # Ou l'adresse IP de votre serveur MySQL
-        'PORT': '3306',       # Port par défaut de MySQL
+        'HOST': 'localhost',  
+        'PORT': '3306',       
         'OPTIONS': {
             'charset': 'utf8mb4',
         },

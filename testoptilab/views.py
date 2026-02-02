@@ -255,8 +255,10 @@ def upload_excel(request):
             filtered_data_selected['date'] = filtered_data_selected['date'].dt.strftime('%Y-%m-%d %H:%M:%S')
             # Convertir le DataFrame en une liste de dictionnaires
             filtered_data_json = filtered_data_selected.to_json(orient='records', date_format='iso')
+            print(df.columns)
 
 
+           
             # print('filtered_data', filtered_data_json)
             # Compresser la chaîne JSON
             compressed_data = gzip.compress(filtered_data_json.encode('utf-8'))
@@ -267,8 +269,8 @@ def upload_excel(request):
 
             # print("valeur",filtered_data)
 
-            selected_column_data = filtered_data[selected_column]
-            # print("Colonnes sélectionnées :", selected_column_data)
+            selected_column_data =  filtered_data[selected_column].iloc[0]
+            print("Colonnes sélectionnées :", selected_column_data)
 
             min_consommation = filtered_data[selected_column].min()
             max_consommation = filtered_data[selected_column].max()
@@ -276,9 +278,9 @@ def upload_excel(request):
 
 
             # Affichez les résultats
-            # print(f"Min Consommation (20 octobre 2019 - 10 novembre 2019): {min_consommation}")
-            # print(f"Max Consommation (20 octobre 2019 - 10 novembre 2019): {max_consommation}")
-            # print(f"Moyenne Consommation (20 octobre 2019 - 10 novembre 2019): {moyenne_consommation}")
+            print(f"Min Consommation (20 octobre 2019 - 10 novembre 2019): {min_consommation}")
+            print(f"Max Consommation (20 octobre 2019 - 10 novembre 2019): {max_consommation}")
+            print(f"Moyenne Consommation (20 octobre 2019 - 10 novembre 2019): {moyenne_consommation}")
 
             pas_1 =  round(valeur_maximale / nbre_case)
             pas_2 = round(valeur_maximale * coef / nbre_case)

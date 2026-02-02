@@ -5,21 +5,17 @@
 {% block content %}
 
     <h2>Résultats de l'importation</h2>
-    <!-- Afficher pas_1 et pas_2 -->
     <p>Pas 1: {{ pas_1 }}</p>
     <p>Pas 2: {{ pas_2 }}</p>
     <p>Consommation minimale : {{ min_consommation }}</p>
     <p>Consommation maximale : {{ max_consommation }}</p>
     <p>Consommation moyenne : {{ moyenne_consommation }}</p>
-    <!-- Afficher les vecteurs pas1 et pas2 -->
     <p>Vecteur Pas 1 : {{ vecteur_pas1 }}</p>
     <p>Vecteur Pas 2 : {{ vecteur_pas2 }}</p>
-  <!-- Afficher les vecteurs consommation -->
     <p>Vecteur Consommation 1 : {{ vecteur_consommation1 }}</p>
     <p>Vecteur Consommation 2 : {{ vecteur_consommation2 }}</p>
     <p>Vecteur Consommation Jour 1 : {{ vecteur_consommation_jour1 }}</p>
     <p>Vecteur Consommation Jour 2 : {{ vecteur_consommation_jour2 }}</p>
-    <!-- Afficher les sommes d'intervalles -->
     <p>Somme Intervalle 1 : {{ somme_intervalle1 }}</p>
     <p>Somme Intervalle 2 : {{ somme_intervalle2 }}</p>
 
@@ -66,7 +62,6 @@
             <tr>
                 <th>Date</th>
                 <th>Consommation</th>
-                <!-- Ajoutez d'autres colonnes au besoin -->
             </tr>
         </thead>
         <tbody>
@@ -74,7 +69,6 @@
                 <tr>
                     <td>{{ entry.Date }}</td>
                     <td>{{ entry.Consommation }}</td>
-                    <!-- Ajoutez d'autres colonnes au besoin -->
                 </tr>
             {% endfor %}
         </tbody>

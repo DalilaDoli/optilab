@@ -21,7 +21,7 @@ from testoptilab.views import affiche_fichier
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', affiche_fichier),  # Rediriger vers importer_fichier
+    path('', affiche_fichier), 
 
-    path('', include('testoptilab.urls', namespace='testoptilab')),  # Assurez-vous d'inclure le namespace ici
+    path('', include('testoptilab.urls', namespace='testoptilab')), 
 ]

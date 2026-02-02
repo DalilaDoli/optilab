@@ -2,10 +2,7 @@
 
 {% block content %}
 <style>
-    /* Masquer le bouton "Choisir un fichier" par défaut */
- 
-
-    /* Styliser le bouton personnalisé */
+   
     input[type="file"]::file-selector-button {
         border: 1px solid #ccc;
         display: inline-block;
@@ -16,17 +13,14 @@
         border-radius: 4px;
     }
 
-    /* Styliser le texte du bouton personnalisé */
     input[type="file"]::file-selector-button::before {
         content: 'joindre';
     }
 
-    /* Mettre en surbrillance lorsqu'on passe la souris */
     input[type="file"]::file-selector-button:hover {
         background-color: #ddd;
     }
     .custom-file-upload {
-        /* Votre style personnalisé ici */
         background-color: #4CAF50;
         color: white;
         padding: 10px;
